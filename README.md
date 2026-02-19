@@ -1,4 +1,4 @@
-# Guida galattica al'utilizzo di Cadmus per NDP
+# Guida galattica all'utilizzo di Cadmus per NDP
 
 In questa repository si può consultare tutto il materiale utile per lavorare nell'ambiente di editing di Cadmus Naples Dante Project (https://cadmus.naplesdante.it/items).
 
