@@ -9,7 +9,7 @@ Si utilizzerà come esempio la scheda IDP del ms. **Firenze, BML, Acquisti e don
 
 Passaggi da seguire:
 
-- [1.1 Aggiunta di item](#11-aggiunta-di-item)
+- [1.1 Aggiunta di item](./tutorialForCadmus.md/#11-aggiunta-di-item)
 - [1.2 Aggiunta di part](#12-aggiunta-di-part)
 - [2. Descrizione codicologica](#2-descrizione-codicologica-material)
 - [3. Descrizione del progetto decorativo](#3-contenuti-e-progetto-decorativo-content)    
@@ -17,22 +17,11 @@ Passaggi da seguire:
 
 > NB: `IDP_...` = dopo il prefisso IDP_ è indicato il nome del campo di una tabella del database di IDP, che corrisponde nei contenuti ad un campo della scheda del ms visualizzata su dante.unina.it, con una label che talvolta ha un nome leggermente diverso, la quale anche viene indicata in **grassetto**. 
 
-## 0. brick ricorrenti
+## 1.1 Aggiunta di _item_ per il ms
 
-### reference
+Per l'aggiunta di un _item_ cf. [TutorialForCadmus/Aggiunta di item](./tutorialForCadmus.md/#11-aggiunta-di-item)
 
-## 1.1 Aggiunta di _item_
-
-Cadmus è un framework di descrizione modulare, nel senso che offre la possibilità di strutturare le informazioni in moduli componibili. In particolare l'architettura di Cadmus è costituita da **_items_** e da **_parts_**.  
- 
-L'_item_ è come una scatola che contiene al suo interno elementi correlati tra loro e riferiti al contenitore che sono le _parts_.  
-Dunque possiamo utilizzare l'_item_ per identificare un manoscritto o un'unità codicologica, la cui descrizione analitica si articolerà con l'inserimento di diverse _parts_ (Cf. [Documentazione di Cadmus](https://cadmus.fusi-soft.com/docs/data-architecture)). 
-
-Dunque per aggiungere un ms al database di Cadmus è necessario creare un nuovo _item_, andando sul bottone in basso a sinistra nella visualizzazione dell'editor di Cadmus_NDP.
-
-![aggiunta item](./additem.png)<figcaption>Aggiunta di un item in Cadmus.</figcaption>
-
-### Metadati identificativi (identity)
+### Metadati identificativi da IDP>Cadmus (identity)
 
 Per la creazione di un nuovo _item_ bisogna inserire i seguenti metadati obbligatori che costituiscono l'etichetta (_**label**_) dell'_item_: 
 - `title` che corrisponde al titolo arbitrario identificativo dell'item. Qui si deve inserire il **titolo che appare nella scheda IDP** (= `IDP_indice` = `IDP_città` + `IDP_biblioteche/nome` +`IDP_segnatura`) con abbreviazione canonica della biblioteca di riferimento. Nel caso preso ad esempio si ha quindi l'item con nome: [Firenze, BML, Acquisti e doni 86](https://cadmuslab.naplesdante.it/items/da02c76d-a0f2-4285-8622-97a286fc6102).
@@ -49,13 +38,9 @@ Dopo il completamento della scheda si potrà selezionare `complete` e togliere l
 
 [torna all'indice](#linee-guida-per-il-trasferimento-di-schede-da-idp-a-cadmus)
 
-## 1.2 Aggiunta di _part_
+## 1.2 Aggiunta di _part_ per le singole analisi
 
-Un elemento _part_ è un **set di dati** coerente che si riferisce all'item al quale viene correlato (Cf. [Documentazione di Cadmus](https://cadmus.fusi-soft.com/docs/data-architecture)).  
-DUnque, dopo aver creato un _item_ si può procedere alla parte fondamentale del lavoro, ossia l'aggiunta delle parti di Cadmus utili a descrivere l'item bibliologico in questione.  
-Si veda di seguito lo screenshot di esempio per l'aggiunta di una parte. 
-
-![Aggiunta di Part](addpart.png)<figcaption>Aggiunta di un item in Cadmus.</figcaption>
+Per l'aggiunta di _part_ cf. [TutorialForCadmus/Aggiunta di part](./tutorialForCadmus.md/#12-aggiunta-di-part)
 
 ### 1.2.1 Aggiunta della part `metadata`con EID e autore
 
@@ -88,6 +73,7 @@ Quindi nell'esempio l'ID risulta: `ms_fi-bml-86`
 
 ## 2. Descrizione codicologica (material)
 
+La descrizione codicologica si riferisce alle parts afferenti a material
 ### Dimensioni e layout > `Layouts`
 
 In Cadmus le informazioni riferite alle dimensioni fisiche della pagina e alle misure dello specchio di scrittura possono essere descritte dalla _part_ `Layouts`.   
