@@ -317,10 +317,6 @@ indica l'autore della catalogazione nell'ambiente Cadmus nel caso in cui abbia f
 ### sheet labels
 ### watermarks
 
-
-
-
-
 ## 4. Elenco analitico (in ordine alfabetico) dei bricks
 
 ## 5. APPENDICI
