@@ -244,7 +244,7 @@ Si riportano di seguito gli schemi di catalogazione da seguire per:
 
 ## 3 Elenco analitico (in ordine alfabetico) delle part
 Di seguito si riportano in ordine alfabetico le parts di CADMUS NDP (che sono richiamate nelle singole sezioni dedicate ad ogni items). All'intero di ogni part si ritrovano dei _bricks_ che servono ad inserire una tipologia ancora più specifica di dato. Per l'elenco analitico dei bricks, si rimanda alla sezione successiva, ma ogni brick è richiamato all'interno delle parts in cui è implementato.
-
+Cf. https://github.com/vedph/cadmus-ndp-api?tab=readme-ov-file
 ### bindings
 ### categories
 text categories are a cross-reference taxonomy used to define the text type (e.g. comment) from the philological point of view
@@ -260,8 +260,7 @@ Per l'aggiunta di ogni lacuna si seguando tali passaggi:
   (c) il verso di inizio/fine della lacuna: per indicarlo si usa il brick [Citation](#cadmusrefscitation)
       Si può aggiungere una nota se si ritiene utile.
 4. dopo aver compilato correttamente i campi "start" e "end" e l'eventuale nota  si può salvare la lacuna con il bottone blu con la spunta in basso. Nell'immagine può vedere come le appare prima di salvare (in basso) e dopo il salvataggio (in alto).
-image.png
-
+![aggiunta gap](./gap_cadmus.png)<figcaption>Esempio di lacuna aggiunta</figcaption>
 ### decorations
 ### edits
 ### hands
@@ -328,13 +327,17 @@ indica l'autore della catalogazione nell'ambiente Cadmus nel caso in cui abbia f
 ### references
 ### sheet labels
 ### watermarks
-
+cf. 
 ## 4. Elenco analitico (in ordine alfabetico) dei bricks
+cf. https://github.com/vedph/cadmus-bricks-shell-v3#references ; https://cadmus-bricks-v3.fusi-soft.com/home .
+### AssertedData
+### AssertedPlace
+### CadmusRefsChronotope
 ### CadmusRefsCitation
 https://github.com/vedph/cadmus-bricks-shell-v3/blob/master/projects/myrmidon/cadmus-refs-citation/README.md
 I. Andando sulla freccia verso il basso si può utilizzare il "picker" che permette di selezionare cantica, canto e verso. Si seleziona ogni parte e si convalida con la spunta blu. Una volta inserito anche il verso si salva tutto il riferimento con la spunta blu in basso 
 II. si può inserire digitando direttamente nel campo "citation"  scrivendo "@dc:" (indica che si tratta della Divina Commedia) seguito dall'indicazione standard della cantica puntata, seguita da spazio, il numero romano per il campo e il numero per il verso.
-
+### CadmusRefsDocReferences
 ## 5. APPENDICI
 ### Abbreviazioni biblioteche
 Se una biblioteca non è presente si prega di segnalarlo via email in modo che si possa poi stabilire una sigla convenzionale e univoca all'interno del progetto.
