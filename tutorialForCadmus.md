@@ -250,6 +250,18 @@ Di seguito si riportano in ordine alfabetico le parts di CADMUS NDP (che sono ri
 text categories are a cross-reference taxonomy used to define the text type (e.g. comment) from the philological point of view
 ### chronotopes
 ### contents
+#### gaps
+La sezione "gaps" è utile per aggiungere l'indicazione delle lacune. 
+Per l'aggiunta di ogni lacuna si seguando tali passaggi:
+1. si aggiunge una lacuna con il bottone gap
+2. in seguito l'editor mostra "start" e "end": due campi che indicano l'inizio e la fine della lacuna nel testo. Per ognuno dei due campi si clicca sull'icona della matita e si indica:  
+  (a) il tipo di lacuna (type)    
+  (b) parziale/completa   
+  (c) il verso di inizio/fine della lacuna: per indicarlo si usa il brick [Citation](#cadmusrefscitation)
+      Si può aggiungere una nota se si ritiene utile.
+4. dopo aver compilato correttamente i campi "start" e "end" e l'eventuale nota  si può salvare la lacuna con il bottone blu con la spunta in basso. Nell'immagine può vedere come le appare prima di salvare (in basso) e dopo il salvataggio (in alto).
+image.png
+
 ### decorations
 ### edits
 ### hands
@@ -318,6 +330,10 @@ indica l'autore della catalogazione nell'ambiente Cadmus nel caso in cui abbia f
 ### watermarks
 
 ## 4. Elenco analitico (in ordine alfabetico) dei bricks
+### CadmusRefsCitation
+https://github.com/vedph/cadmus-bricks-shell-v3/blob/master/projects/myrmidon/cadmus-refs-citation/README.md
+I. Andando sulla freccia verso il basso si può utilizzare il "picker" che permette di selezionare cantica, canto e verso. Si seleziona ogni parte e si convalida con la spunta blu. Una volta inserito anche il verso si salva tutto il riferimento con la spunta blu in basso 
+II. si può inserire digitando direttamente nel campo "citation"  scrivendo "@dc:" (indica che si tratta della Divina Commedia) seguito dall'indicazione standard della cantica puntata, seguita da spazio, il numero romano per il campo e il numero per il verso.
 
 ## 5. APPENDICI
 ### Abbreviazioni biblioteche
