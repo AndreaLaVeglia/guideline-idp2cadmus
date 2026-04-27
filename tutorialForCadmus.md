@@ -1,4 +1,4 @@
-# Guida pratica all'utilizzo di Cadmus
+# Guida pratica all'utilizzo di NDP Cadmus
 
 >a cura di Andrea La Veglia (per chiarimenti: [alaveglia@unisa.it](mailto:alaveglia@unisa.it))
 
@@ -317,11 +317,12 @@ Leggere preliminarmente le informazioni per [definizione ed elaborazione di EID]
 
 2. sigla standard della città di provenienza o di edizione;
 3. sigla della biblioteca o archivio in cui è contenuto il manufatto da descrivere, utilizzando le [abbreviazioni](#abbreviazioni-biblioteche) stabilite convenzionalmente; 
-4. parte numerica della segnatura del manoscritto o dell'incunabolo 
+4. abbreviazione della parte letterale della segnatura
+5. parte numerica della segnatura del manoscritto o dell'incunabolo 
 
 **1** e **2** sono separate da un underscore ( **_** ), le altre parti da un trattino intermedio ( **-** )
 
-Quindi nel caso del manoscritto mediceo l'EID risulta: `ms_fi-bml-86`
+Quindi nel caso del manoscritto mediceo l'EID risulta: `ms_fi-bml-aed-86`
 
 >NB tutte le lettere sono minuscole
 #### Autorialità della scheda
