@@ -46,6 +46,8 @@ Si veda di seguito lo screenshot di esempio per l'aggiunta di una parte.
 
 In Cadmus per ogni tipologia di oggetto è stato predisposto un modello descrittivo/interpretativo che suggerisce l'utilizzo di specifiche parts.
 
+>AVVERTENZA GENERALE: per ogni part ci sono dei campi obbligatori indicati con l'asterisco (*): se non vengono compilati, come segnalerà il messsaggio di errore, risulterà impossibile salvare la part.
+
 Si riportano di seguito gli schemi di catalogazione da seguire per:
 - [manoscritti](#manuscript), 
 - [frammenti](#fragment)
@@ -244,11 +246,13 @@ Si riportano di seguito gli schemi di catalogazione da seguire per:
 
 ## 3 Elenco analitico (in ordine alfabetico) delle part
 Di seguito si riportano in ordine alfabetico le parts di CADMUS NDP (che sono richiamate nelle singole sezioni dedicate ad ogni items). All'intero di ogni part si ritrovano dei _bricks_ che servono ad inserire una tipologia ancora più specifica di dato. Per l'elenco analitico dei bricks, si rimanda alla sezione successiva, ma ogni brick è richiamato all'interno delle parts in cui è implementato.
-Cf. https://github.com/vedph/cadmus-ndp-api?tab=readme-ov-file
+Cf. https://github.com/vedph/cadmus-ndp-api
+
 ### bindings
 ### categories
 text categories are a cross-reference taxonomy used to define the text type (e.g. comment) from the philological point of view
 ### chronotopes
+In questa part si possono aggiungere diverse coordinate crono-spaziali con il brick [chronotope](#cadmusrefschronotope).
 ### contents
 #### gaps
 La sezione "gaps" è utile per aggiungere l'indicazione delle lacune. 
@@ -294,19 +298,23 @@ Le informazioni aggiuntive contenute in **Disposizione del testo** vanno aggiunt
 ### material description
 ### metadata
 Con questa parte si attribuiscono all'item dei metadati generici.  
-Convenzionalmente qui si deve inserire un EID e le informazioni e le informazioni sull'autorialità della scheda
+Convenzionalmente qui si deve inserire un [EID](<#definizione-ed-elaborazione-di-un-eid>) e le informazioni e le informazioni sull'autorialità della scheda
 Ogni metadato ha un campo *type* che indica il [tipo di dato](#tipi-di-dato) un campo *name* per indicare la classe di 
 
 #### name=EID 
 
+Leggere preliminarmente le informazioni per [definizione ed elaborazione di EID](<#definizione-ed-elaborazione-di-un-eid>)
+
 1. indica il *facet*, ossia la tipologia di item secondo la seguente tabella
+
 | facet | abbreviazione per EID |
 |---|---|
 | manoscritto | ms |
 | testo a stampa | inc/stamp |
 | edizione | ed |
-| frammento ! fr |
+| frammento | fr |
 | iconografia | ... |
+
 2. sigla standard della città di provenienza o di edizione;
 3. sigla della biblioteca o archivio in cui è contenuto il manufatto da descrivere, utilizzando le [abbreviazioni](#abbreviazioni-biblioteche) stabilite convenzionalmente; 
 4. parte numerica della segnatura del manoscritto o dell'incunabolo 
@@ -402,14 +410,14 @@ Se una biblioteca non è presente si prega di segnalarlo via email in modo che s
 | Roma                          | Biblioteca dell'Accademia Nazionale dei Lincei e Corsiniana               | BANLC  |
 | Roma                          | Biblioteca Nazionale Centrale                                             | BNC    |
 | San Daniele del Friuli         | ...                                                                       | ...    |
-### Concetti utili ricorrenti
+### Concetti e indicazioni utili ricorrenti
 ####  Tipi di dato
-In informatica è importante assegnare definire il [tipo di dato](https://it.wikipedia.org/wiki/Tipo_di_dato) per consentire all'elaboratore di processarlo ed eseguire operazioni.
+In informatica è importante definire per ogni dato la sua [tipologia](https://it.wikipedia.org/wiki/Tipo_di_dato) per consentire all'elaboratore di processarlo ed eseguire operazioni. Questo passaggio è molto importante, poiché se, ad esempio, si immette il valore "1" ma si classifica come _string_ e non come numero non sarà possibile utilizzarlo per compiere operazioni aritmetiche con altri numeri, poiché l'elaboratore considera tale valore come dato testuale.
 Spesso in Cadmus viene chiesto di selezionare la tipologia del dato che stiamo immettendo e queste sono le alternative:
 - **boolean**: il tipo booleano ha due soli valori: true ("vero") e false ("falso")
 - **string**: le stringhe sono sequenze di caratteri di lunghezza finita. Si indica all'elaboratore di considerare il dato come testo e non per il suo eventuale valore intrinseco.
 - **number**: un dato interamente numerico, che l'elaboratore può utilizzare per operazioni aritmetiche.
-#### elaborazione di un EID
+#### Definizione ed elaborazione di un EID
 L'EID è un identificativo **univoco** da assegnare ad un determinato dato o insieme di dati.
 Come regole generali per determinare un ID:
 - deve essere composto solo da lettere e numeri
