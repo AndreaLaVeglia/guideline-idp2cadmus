@@ -338,14 +338,38 @@ indica l'autore della catalogazione nell'ambiente Cadmus nel caso in cui abbia f
 cf. 
 ## 4. Elenco analitico (in ordine alfabetico) dei bricks
 cf. https://github.com/vedph/cadmus-bricks-shell-v3#references ; https://cadmus-bricks-v3.fusi-soft.com/home .
-### AssertedData
-### AssertedPlace
+#### assertions
+L'asserzione è quell'informazione che ci permette di attribuire una data o un luogo ad un evento.
+L'assertion può rimandare ad una [reference](#cadmusrefsdocreferences).
+##### AssertedData
+L'assertion della data può riferirsi ad una citazione -> [citation](#cadmusrefscitation)
+##### AssertedPlace
 ### CadmusRefsChronotope
+Il brick chronotope permette di aggiungere le coordinate cronospaziali di un evento.
+Il cronotopo è composto da una data e/o da un luogo. 
+- per aggiungere il luogo si spunta "place" e poi si scrive il luogo secondo le convenzioni decise dal gruppo di ricerca.
+- la data è composta da:
+    - value: anno (positivo/negativo a seconda che sia a.C. o d.C.)
+    - slide: il "delta" che si può indicare per indicare un'oscillazione tra due anni nel caso in cui non ci sia sicurezza (oppure nel caso in cui l'anno antico intersechi due anni gregoriani)
+    - mese
+    - giorno
+    - hint: una breve nota esplicativa utilizzata per chiarire o motivare meglio il dato cronologico.
+- Se si vuole inserire un intervallo temporale si accende lo switch "A-B" e si inserisce la seconda data "estremo".
+Si ricordi di salvare ad ogni passaggio l'informazione inserita cliccando sul bottone tondo blu con la spunta centrale.
+Per la data e per il luogo si può indicare un'assertion.
 ### CadmusRefsCitation
 https://github.com/vedph/cadmus-bricks-shell-v3/blob/master/projects/myrmidon/cadmus-refs-citation/README.md
 I. Andando sulla freccia verso il basso si può utilizzare il "picker" che permette di selezionare cantica, canto e verso. Si seleziona ogni parte e si convalida con la spunta blu. Una volta inserito anche il verso si salva tutto il riferimento con la spunta blu in basso 
 II. si può inserire digitando direttamente nel campo "citation"  scrivendo "@dc:" (indica che si tratta della Divina Commedia) seguito dall'indicazione standard della cantica puntata, seguita da spazio, il numero romano per il campo e il numero per il verso.
 ### CadmusRefsDocReferences
+La reference è un rimando ad una fonte esterna che supporta una determinata asserzione. Si può selezionare una L'assertion della data può riferirsi ad una citazione -> [citation](#cadmusrefscitation) o un -> [lookup](#lookup)
+### Lookup
+Il lookup è un servizio che rimanda ad una reference esterna tramite un identificativo univoco. Si selezione tramite picker il "provider", ossia la fonte esterna del dato a cui ci si vuol riferire e poi con "entity" si cerca il dato stesso.
+Attualmente i servizi di lookup forniti sono: 
+- Zotero: servizio di bibliografia
+- Biblissima+: database in mediawiki che contiene un grande corpus di dati riferiti a codicologia e storia dell'arte.
+- VIAF: archivio internazionale virtuale che combina i controlli di autorità di numerose biblioteche nazionali e istituzioni nel mondo in un unico servizio online
+- MOL: "Manus Online", archivio di manoscritti gestito dall'Istituto Centrale per il Catalogo Unico.
 ## 5. APPENDICI
 ### Abbreviazioni biblioteche
 Se una biblioteca non è presente si prega di segnalarlo via email in modo che si possa poi stabilire una sigla convenzionale e univoca all'interno del progetto.
