@@ -329,12 +329,46 @@ Quindi nel caso del manoscritto mediceo l'EID risulta: `ms_fi-bml-aed-86`
 #### `author` 
 indica l'autore della catalogazione nell'ambiente Cadmus nel caso in cui abbia fatto un lavoro di catalogazione  "di prima mano"
 #### `revisor` 
-indica l'autore della catalogazione nell'ambiente Cadmus nel caso in cui abbia fatto un lavoro di catalogazione  "di seconda mano"
+indica l'autore della catalogazione nell'ambiente Cadmus nel caso in cui abbia fatto un lavoro di catalogazione  "di seconda mano" 
 ### notable word forms
 ### note
 ### preservation states
 ### references
 ### sheet labels
+ Questa part descrive la relazione tra le carte e i fascicoli di un codice e permette di predicare altre informazioni su ogni carta.
+
+Il risultato finale è una "tabella" che ha in orizzontale (righe) le carte e in verticale (colonne) qualsiasi "etichettatura" della pagina.  
+
+La guida all'utilizzo di questa parte si trova nella sezione **help**. Di seguito si riportato i passaggi principali che consiglio di seguire.
+
+> 1. Contare le carte totali del manoscritto e generare una riga per ogni carta. Il numero si ottiene sommando le carte totali di tutti i fascicoli. Dunque con l'`adder` è possibile specificare il tipo di carta che si deve aggiungere (le carte generiche contenute in fascicoli sono del tipo _body_) e poi inserire il numero.
+>> Nel ms. in questione, avendo questa formula di descrizione fascicolare: 1/5, 2/7 3/8, 4/4, 5/8, il risultato è: 5+7+8+4+8 = 32.
+>
+>2. Aggiungere la colonna **q** (lasciando invariato il numero totale di righe). Questa colonna dà informazioni sulla fascicolazione (q sta per "quires").
+>
+>3. Inserire con lo strumento `action` le informazioni sulla fascicolazione, utilizzando la seguente formula:
+>> `axb=qc/d`    
+>
+>sostituendo così  
+a = carta da cui inizia il fascicolo  
+b = numero di ripetizioni (dunque il numero di eventuali fascicoli uguali ripetuti in sequenza)  
+c = numero del fascicolo  
+d = numero carte totali del fascicolo
+>> Nel ms. in questione si possono generare dunque i fascicoli con le seguenti formule:   
+>   - `1x1 = q1/5`
+>   - `6x1 = q2/7`
+>   - `13x1 = q3/8`
+>   - `21x1 = q4/4`
+>   - `24x1 = q5/8`
+>4. aggiungere le eventuali altre colonne:
+>- n = numerazione
+>- c = richiamo
+>- s = segnatura
+>- r = numerazione a registro   
+Per ognuna di queste colonne è possibile aggiungere una nota generica andando a selezionare la colonna in questione con il menu a tendina e cliccando sul pulsante alla destra. C'è poi la possibile di inserire una `scoped note` per ogni fascicolo.  
+È possibile aggiungere anche più colonne della stessa tipologia se si disambiguano con un diverso `name`, così come nell'esempio in questione:
+![Colonne in Sheet Labels](SLcolumns.png)
+
 ### watermarks
 cf. 
 ## 4. Elenco analitico (in ordine alfabetico) dei bricks
